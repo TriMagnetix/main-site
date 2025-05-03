@@ -1,0 +1,75 @@
+/* Section Dividers */
+
+.divider {
+  position: relative;
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* Wave Divider */
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+.wave-divider .shape-fill {
+  fill: var(--divider-fill-color, #FFFFFF);
+}
+
+/* Angled Divider */
+.angle-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+.angle-divider .shape-fill {
+  fill: var(--divider-fill-color, #FFFFFF);
+}
+
+/* Triangle Divider */
+.triangle-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+.triangle-divider .shape-fill {
+  fill: var(--divider-fill-color, #FFFFFF);
+}
+
+/* Curve Divider */
+.curve-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+.curve-divider .shape-fill {
+  fill: var(--divider-fill-color, #FFFFFF);
+}

@@ -1,0 +1,104 @@
+/* Hover effects for TriMagnetix website */
+
+/* Base button hover effects */
+.btn {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Primary button specific hover */
+.btn-primary:hover {
+  box-shadow: 0 6px 12px rgba(20, 83, 45, 0.2);
+}
+
+/* Secondary button specific hover */
+.btn-secondary:hover {
+  background-color: rgba(167, 243, 208, 0.2);
+}
+
+/* Card hover effects */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(20, 83, 45, 0.1);
+}
+
+/* Link hover effects */
+.hover-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.hover-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--light-green);
+  transition: width 0.3s ease;
+}
+
+.hover-link:hover {
+  color: var(--light-green);
+}
+
+.hover-link:hover::after {
+  width: 100%;
+}
+
+/* Icon hover effects */
+.hover-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hover-icon:hover {
+  transform: scale(1.1);
+  color: var(--light-green);
+}
+
+/* Pulse effect for important elements */
+.hover-pulse:hover {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Glow effect for accent elements */
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px var(--light-green);
+}
+
+/* Ripple effect class - keeping the class but removing the actual effect */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}

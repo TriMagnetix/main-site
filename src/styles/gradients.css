@@ -1,0 +1,46 @@
+/* Gradient styles for TriMagnetix website */
+
+.gradient-hero {
+  background: linear-gradient(135deg, var(--light-green) 0%, #8BE8C9 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(to bottom, #FFFFFF 0%, #F9FAFB 100%);
+  box-shadow: 0 4px 6px rgba(20, 83, 45, 0.05);
+  transition: all 0.3s ease;
+}
+
+.gradient-card:hover {
+  box-shadow: 0 10px 15px rgba(20, 83, 45, 0.1);
+  transform: translateY(-2px);
+}
+
+.gradient-accent {
+  background: linear-gradient(90deg, var(--dark-green) 0%, #1E6E41 100%);
+}
+
+.gradient-section-header {
+  background: linear-gradient(90deg, var(--dark-green) 0%, #1E6E41 50%, var(--dark-green) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.gradient-footer {
+  background: linear-gradient(to bottom, #F9FAFB 0%, #F3F4F6 100%);
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--light-green), transparent);
+}
