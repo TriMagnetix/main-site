@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProductsSection from "@/components/ProductsSection";
 import ContactSection from "@/components/ContactSection";
+import PartnerLogosSection from "@/components/PartnerLogosSection";
 
 export const metadata: Metadata = {
   title: "Home | Trimagnetix - Advanced Magnetic Solutions",
@@ -31,6 +32,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ProductsSection />
+        <PartnerLogosSection />
         <ContactSection />
       </main>
       <Footer />
