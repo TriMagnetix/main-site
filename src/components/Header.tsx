@@ -52,6 +52,7 @@ export default function Header() {
             <li><Link href="#hero" className="hover-link">Home</Link></li>
             <li><Link href="#about" className="hover-link">About</Link></li>
             <li><Link href="#products" className="hover-link">Products</Link></li>
+            <li><Link href="#partners" className="hover-link">Partners</Link></li>
             <li><Link href="#contact" className="hover-link">Contact</Link></li>
           </ul>
         </nav>
@@ -64,6 +65,7 @@ export default function Header() {
             <li><Link href="#hero" className="hover-link block" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
             <li><Link href="#about" className="hover-link block" onClick={() => setIsMenuOpen(false)}>About</Link></li>
             <li><Link href="#products" className="hover-link block" onClick={() => setIsMenuOpen(false)}>Products</Link></li>
+            <li><Link href="#partners" className="hover-link block" onClick={() => setIsMenuOpen(false)}>Partners</Link></li>
             <li><Link href="#contact" className="hover-link block" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
           </ul>
         </nav>
