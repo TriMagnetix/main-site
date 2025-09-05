@@ -7,7 +7,7 @@ export default function ProductsSection() {
   const products = [
     {
       title: "Integrated computation at the edge",
-      description: "Our triangle-based processors combine logic and memory into one compact unit, enabling smarter, faster, and more efficient computing.",
+      description: "Our nanomagnetic processors combine logic and memory into one compact unit, enabling smarter, faster, and more efficient computing.",
       icon: <FiCpu className="text-4xl text-dark-green mb-4 hover-icon" />
     },
     {
