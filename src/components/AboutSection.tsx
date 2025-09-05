@@ -21,13 +21,13 @@ export default function AboutSection() {
         <div className="max-w-3xl mx-auto">
           <AnimateOnScroll animation="slide-up" delay="delay-200">
             <p className="mb-6">
-              TriMagnetix is at the forefront of nanomagnetic computing technology. Our patented triangle-based magnetic architecture enables unprecedented energy efficiency and performance in computing systems.
+              TriMagnetix is at the forefront of nanomagnetic computing technology. Our patented nanomagnetic magnetic architecture enables unprecedented energy efficiency and performance in computing systems.
             </p>
           </AnimateOnScroll>
           
           <AnimateOnScroll animation="scale-up" delay="delay-300">
             <blockquote className="pull-quote my-8">
-              Reimagining computing through the power of nanomagnetic triangles.
+              Reimagining computing through the power of nanomagnetics.
             </blockquote>
           </AnimateOnScroll>
           

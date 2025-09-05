@@ -35,6 +35,35 @@ export const metadata: Metadata = {
   publisher: "Trimagnetix",
   robots: "index, follow",
   applicationName: "Trimagnetix Website",
+  
+  // Open Graph meta tags for social media sharing
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://trimagnetix.com',
+    siteName: 'Trimagnetix',
+    title: 'Trimagnetix | Innovative Magnetic Solutions',
+    description: 'Trimagnetix specializes in advanced magnetic technologies and solutions for medical, industrial, and consumer technology sectors. Discover how our innovative magnetic solutions can transform your projects.',
+    images: [
+      {
+        url: '/TriMagnetixLogoWithName.png',
+        width: 1200,
+        height: 630,
+        alt: 'Trimagnetix Logo',
+      },
+    ],
+  },
+  
+  // Twitter Card meta tags
+  twitter: {
+    card: 'summary_large_image',
+    site: '@trimagnetix',
+    creator: '@trimagnetix',
+    title: 'Trimagnetix | Innovative Magnetic Solutions',
+    description: 'Trimagnetix specializes in advanced magnetic technologies and solutions for medical, industrial, and consumer technology sectors.',
+    images: ['/TriMagnetixLogoWithName.png'],
+  },
+  
   icons: {
     icon: [
       { url: '/favicon.ico' },

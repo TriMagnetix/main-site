@@ -28,7 +28,7 @@ export default function HeroSection() {
                 Innovative magnetic solutions for tomorrow's technology
               </h2>
               <p className="text-soft-black/80 mb-6 max-w-xl">
-                Our nanomagnetic triangle technology merges memory and logic into a single, 
+                Our nanomagnetic technology merges memory and logic into a single, 
                 ultra-efficient processor for edge computing, aerospace, and secure systems.
               </p>
               <div className="flex flex-wrap gap-4">
