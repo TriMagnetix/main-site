@@ -27,7 +27,7 @@ export default function AboutSection() {
           
           <AnimateOnScroll animation="scale-up" delay="delay-300">
             <blockquote className="pull-quote my-8">
-              Reimagining computing through the power of nanomagnetics.
+             Our Mission Statement: To pioneer transformative compute that enables the breakthroughs of tomorrow.
             </blockquote>
           </AnimateOnScroll>
           
