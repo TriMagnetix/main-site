@@ -1,26 +1,29 @@
-/* Gradient styles for TriMagnetix website */
+/* Gradient styles for TriMagnetix website - Dark Theme */
 
 .gradient-hero {
-  background: linear-gradient(135deg, var(--light-green) 0%, #8BE8C9 100%);
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
 }
 
 .gradient-card {
-  background: linear-gradient(to bottom, #FFFFFF 0%, #F9FAFB 100%);
-  box-shadow: 0 4px 6px rgba(20, 83, 45, 0.05);
+  background: linear-gradient(to bottom, rgba(31, 41, 55, 0.8) 0%, rgba(17, 24, 39, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 6px rgba(52, 211, 153, 0.1);
   transition: all 0.3s ease;
+  border: 1px solid rgba(52, 211, 153, 0.1);
 }
 
 .gradient-card:hover {
-  box-shadow: 0 10px 15px rgba(20, 83, 45, 0.1);
+  box-shadow: 0 10px 15px rgba(52, 211, 153, 0.2), 0 0 20px rgba(52, 211, 153, 0.1);
   transform: translateY(-2px);
+  border-color: rgba(52, 211, 153, 0.3);
 }
 
 .gradient-accent {
-  background: linear-gradient(90deg, var(--dark-green) 0%, #1E6E41 100%);
+  background: linear-gradient(90deg, #10B981 0%, #34D399 100%);
 }
 
 .gradient-section-header {
-  background: linear-gradient(90deg, var(--dark-green) 0%, #1E6E41 50%, var(--dark-green) 100%);
+  background: linear-gradient(90deg, #10B981 0%, #34D399 50%, #10B981 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -28,7 +31,8 @@
 }
 
 .gradient-footer {
-  background: linear-gradient(to bottom, #F9FAFB 0%, #F3F4F6 100%);
+  background: linear-gradient(to bottom, #111827 0%, #000000 100%);
+  border-top: 1px solid rgba(52, 211, 153, 0.2);
 }
 
 .gradient-border {
@@ -42,5 +46,5 @@
   left: 25%;
   width: 50%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--light-green), transparent);
+  background: linear-gradient(90deg, transparent, #34D399, transparent);
 }

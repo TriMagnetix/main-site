@@ -13,8 +13,8 @@ module.exports = {
         'soft-black': '#1F2937',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-geist-mono)', 'monospace'],
+        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        mono: ['ui-monospace', 'monospace'],
         heading: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
@@ -46,7 +46,7 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            'font-family': 'var(--font-geist-sans)',
+            'font-family': 'var(--font-inter)',
             'font-size': '1rem',
             'line-height': '1.5',
             'letter-spacing': '0',

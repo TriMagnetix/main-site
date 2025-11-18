@@ -8,17 +8,17 @@ export default function ProductsSection() {
     {
       title: "Integrated computation at the edge",
       description: "Our nanomagnetic processors combine logic and memory into one compact unit, enabling smarter, faster, and more efficient computing.",
-      icon: <FiCpu className="text-4xl text-dark-green mb-4 hover-icon" />
+      icon: <FiCpu className="text-4xl text-emerald-400 mb-4 hover-icon" />
     },
     {
       title: "Efficiency without Compromise",
       description: "Engineered to operate with nanosecond pulses, our architecture drastically reduces energy use—ideal for battery-powered devices, IoT, and remote systems.",
-      icon: <FiBattery className="text-4xl text-dark-green mb-4 hover-icon" />
+      icon: <FiBattery className="text-4xl text-emerald-400 mb-4 hover-icon" />
     },
     {
       title: "Built for Extreme Environments",
       description: "Designed with aerospace and secure embedded systems in mind, our processors withstand harsh conditions while retaining data and functionality.",
-      icon: <FiShield className="text-4xl text-dark-green mb-4 hover-icon" />
+      icon: <FiShield className="text-4xl text-emerald-400 mb-4 hover-icon" />
     }
   ];
 
@@ -33,13 +33,8 @@ export default function ProductsSection() {
   };
 
   return (
-    <section id="products" className="section-padding bg-gray-50 wave-pattern relative">
-      {/* Top divider */}
-      <div className="absolute top-0 left-0 w-full">
-        <SectionDivider type="angle" position="top" fillColor="#FFFFFF" />
-      </div>
-
-      <div className="container mx-auto px-4 md:px-8 pt-16">
+    <section id="products" className="section-padding wave-pattern relative">
+      <div className="container mx-auto px-4 md:px-8">
         <AnimateOnScroll animation="fade-in" delay="delay-100">
           <div className="text-center mb-12">
             <h2 className="section-title gradient-section-header">Our Products</h2>
@@ -57,21 +52,16 @@ export default function ProductsSection() {
                 className="gradient-card p-6 rounded-lg shadow-sm hover-card flex flex-col items-center text-center"
               >
                 {product.icon}
-                <h3 className="text-xl font-heading font-semibold mb-4 text-dark-green tracking-tight gradient-border hover-link">
+                <h3 className="text-xl font-heading font-semibold mb-4 text-white tracking-tight gradient-border hover-link">
                   {product.title}
                 </h3>
-                <p className="text-soft-black/80">
+                <p className="text-gray-300">
                   {product.description}
                 </p>
               </div>
             </AnimateOnScroll>
           ))}
         </div>
-      </div>
-
-      {/* Bottom divider */}
-      <div className="absolute bottom-0 left-0 w-full">
-        <SectionDivider type="angle" position="bottom" fillColor="#FFFFFF" />
       </div>
     </section>
   );

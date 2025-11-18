@@ -18,33 +18,35 @@ const PartnerLogosSection = () => {
     }));
 
   return (
-    <section id="partners" className="py-12 bg-gray-50 sm:py-16 lg:py-20">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <AnimateOnScroll animation="fade-in">
-          <div className="sm:text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
-              Our Trusted Partners
-            </h2>
-            <p className="mt-4 text-lg font-normal text-gray-600 sm:mt-6 sm:text-xl font-pj">
-              We are proud to collaborate with leading companies and institutions.
-            </p>
-          </div>
-        </AnimateOnScroll>
+    <section id="partners" className="section-padding relative">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="max-w-6xl mx-auto bg-gray-900/90 backdrop-blur-md p-8 md:p-12 rounded-lg shadow-lg border border-emerald-400/20">
+          <AnimateOnScroll animation="fade-in">
+            <div className="text-center mb-12">
+              <h2 className="section-title gradient-section-header">
+                Our Trusted Partners
+              </h2>
+              <p className="mt-4 text-lg text-gray-300">
+                We are proud to collaborate with leading companies and institutions.
+              </p>
+            </div>
+          </AnimateOnScroll>
 
-        <div className="flex flex-wrap justify-center items-center gap-10 mt-12 mx-auto max-w-5xl">
-          {partnerLogos.map((logo, index) => (
-            <AnimateOnScroll key={index} animation="scale-up" delay={delayValues[index % delayValues.length]}>
-              <div className="relative h-24 w-48 flex items-center justify-center">
-                <Image
-                  className="object-contain w-full h-full"
-                  src={logo.src}
-                  alt={logo.alt}
-                  fill
-                  sizes="250px"
-                />
-              </div>
-            </AnimateOnScroll>
-          ))}
+          <div className="flex flex-wrap justify-center items-center gap-10 mt-8 mx-auto max-w-5xl">
+            {partnerLogos.map((logo, index) => (
+              <AnimateOnScroll key={index} animation="scale-up" delay={delayValues[index % delayValues.length]}>
+                <div className="relative h-24 w-48 flex items-center justify-center">
+                  <Image
+                    className="object-contain w-full h-full"
+                    src={logo.src}
+                    alt={logo.alt}
+                    fill
+                    sizes="250px"
+                  />
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
         </div>
       </div>
     </section>

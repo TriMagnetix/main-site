@@ -1,16 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
+import CanvasBackground from "@/components/CanvasBackground";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "900"],
 });
 
 const spaceGrotesk = Space_Grotesk({
@@ -90,8 +87,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} font-sans bg-white text-soft-black antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-black text-gray-100 antialiased`}
       >
+        <CanvasBackground />
         {children}
       </body>
     </html>
