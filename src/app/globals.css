@@ -9,28 +9,49 @@
 @import '../styles/hover-effects.css';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --dark-green: #14532D;
-  --light-green: #A7F3D0;
-  --soft-black: #1F2937;
+  /* Backgrounds */
+  --background: #000000;
+  --bg-secondary: #111827;
+  --bg-elevated: #1F2937;
+  
+  /* Text */
+  --foreground: #FFFFFF;
+  --text-secondary: #D1D5DB;
+  --text-muted: #9CA3AF;
+  
+  /* Emerald Accents */
+  --accent-primary: #34D399;
+  --accent-hover: #10B981;
+  --accent-active: #059669;
+  
+  /* Legacy support */
+  --dark-green: #10B981;
+  --light-green: #34D399;
+  --soft-black: #D1D5DB;
+  
+  /* Borders */
+  --border-subtle: #374151;
+  --border-default: #4B5563;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Hero title glow effect */
+.hero-glow {
+  text-shadow: 0 0 15px rgba(52, 211, 153, 0.5), 0 0 30px rgba(16, 185, 129, 0.3);
 }
 
 /* Custom styles */
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  * {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold tracking-tight;
+    @apply font-sans font-bold tracking-tight;
   }
   
   h1 {
@@ -46,15 +67,15 @@
   }
   
   p {
-    @apply text-base md:text-lg leading-relaxed;
+    @apply text-base md:text-lg leading-relaxed font-sans;
   }
 
   .highlight-text {
-    @apply text-dark-green font-medium;
+    @apply text-emerald-400 font-medium;
   }
 
   .caption-text {
-    @apply text-sm text-soft-black/70 italic;
+    @apply text-sm text-gray-400 italic;
   }
 
   .section-title {
@@ -63,11 +84,11 @@
   
   .section-title::after {
     content: "";
-    @apply block h-1 bg-light-green mt-2 w-2/3 mx-auto;
+    @apply block h-1 bg-emerald-400 mt-2 w-2/3 mx-auto;
   }
 
   .pull-quote {
-    @apply text-xl md:text-2xl font-heading font-medium italic text-dark-green border-l-4 border-light-green pl-4 my-6;
+    @apply text-xl md:text-2xl font-heading font-medium italic text-emerald-400 border-l-4 border-emerald-400 pl-4 my-6;
   }
 }
 
@@ -85,16 +106,17 @@
   }
   
   .btn-primary {
-    @apply bg-dark-green text-white hover:bg-dark-green/90;
+    @apply bg-emerald-500 text-white hover:bg-emerald-600 shadow-lg;
   }
   
   .btn-secondary {
-    @apply border-2 border-dark-green text-dark-green hover:bg-dark-green/10;
+    @apply border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400/10;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
 }

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,9 +22,18 @@ export default function Header() {
   };
 
   return (
-    <header className={`bg-dark-green text-white py-4 sticky top-0 z-50 transition-all ${isScrolled ? 'shadow-md' : ''}`}>
+    <header className={`bg-gray-900/95 backdrop-blur-md border-b border-emerald-400/20 text-white py-4 sticky top-0 z-50 transition-all ${isScrolled ? 'shadow-lg shadow-emerald-400/10' : ''}`}>
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-        <div className="text-xl font-bold hover-pulse">Trimagnetix</div>
+        <Link href="#hero" className="flex items-center">
+          <Image
+            src="/TriMagLogoSideways.png"
+            alt="Trimagnetix Logo"
+            width={200}
+            height={60}
+            className="h-14 w-auto"
+            priority
+          />
+        </Link>
         
         {/* Mobile menu button */}
         <button 

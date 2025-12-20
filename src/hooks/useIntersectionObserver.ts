@@ -45,3 +45,50 @@ export function useIntersectionObserver<T extends Element>(
 
   return [elementRef, isVisible];
 }
+
+// New hook for scroll-based animations that fade in/out based on viewport position
+export function useScrollAnimation<T extends Element>(
+  options: { triggerTop?: number; triggerBottom?: number; once?: boolean } = {}
+): [RefObject<T>, boolean] {
+  const elementRef = useRef<T>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const { triggerTop = 0.15, triggerBottom = 0.95, once = true } = options;
+
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+
+    const checkScroll = () => {
+      if (!element) return;
+
+      const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      const triggerBottomPx = windowHeight * triggerBottom;
+      const triggerTopPx = windowHeight * triggerTop;
+
+      // Check if element is within the "live zone"
+      if (rect.top < triggerBottomPx && rect.bottom > triggerTopPx) {
+        setIsVisible(true);
+      } else {
+        // Only fade out if once is false
+        if (!once) {
+          setIsVisible(false);
+        }
+      }
+    };
+
+    // Initial check
+    checkScroll();
+
+    // Listen for scroll events - call directly without debounce for immediate response
+    window.addEventListener('scroll', checkScroll);
+
+    return () => {
+      window.removeEventListener('scroll', checkScroll);
+    };
+  }, [triggerTop, triggerBottom, once]);
+
+  return [elementRef, isVisible];
+}
