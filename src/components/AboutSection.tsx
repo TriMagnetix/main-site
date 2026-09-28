@@ -16,7 +16,7 @@ export default function AboutSection() {
         <div className="max-w-3xl mx-auto bg-gray-900/90 backdrop-blur-md p-8 rounded-lg shadow-lg border border-emerald-400/20">
           <AnimateOnScroll animation="slide-up" delay="delay-200">
             <p className="mb-6 text-gray-300">
-              TriMagnetix is at the forefront of nanomagnetic computing technology. Our patented nanomagnetic magnetic architecture enables unprecedented energy efficiency and performance in computing systems.
+              TriMagnetix™ is at the forefront of nanomagnetic computing technology. Our patented nanomagnetic magnetic architecture enables unprecedented energy efficiency and performance in computing systems.
             </p>
           </AnimateOnScroll>
           

@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-center">
           <div className="text-center">
-            <p className="font-bold">Trimagnetix</p>
-            <p className="text-sm mt-1"> {currentYear} Trimagnetix. All rights reserved.</p>
+            <p className="font-bold">TriMagnetix™</p>
+            <p className="text-sm mt-1"> {currentYear} TriMagnetix™. All rights reserved.</p>
           </div>
         </div>
       </div>

@@ -9,16 +9,16 @@ import ContactSection from "@/components/ContactSection";
 import PartnerLogosSection from "@/components/PartnerLogosSection";
 
 export const metadata: Metadata = {
-  title: "Home | Trimagnetix - Advanced Magnetic Solutions",
-  description: "Trimagnetix provides cutting-edge magnetic technologies for various industries. Explore our custom magnetic solutions, research capabilities, and system design services.",
+  title: "Home | TriMagnetix™ - Advanced Magnetic Solutions",
+  description: "TriMagnetix™ provides cutting-edge magnetic technologies for various industries. Explore our custom magnetic solutions, research capabilities, and system design services.",
   alternates: {
     canonical: "https://trimagnetix.com",
   },
   openGraph: {
-    title: "Trimagnetix - Innovative Magnetic Solutions",
+    title: "TriMagnetix™ - Innovative Magnetic Solutions",
     description: "Pioneering advanced magnetic technologies for medical, industrial, and consumer applications.",
     url: "https://trimagnetix.com",
-    siteName: "Trimagnetix",
+    siteName: "TriMagnetix™",
     locale: "en_US",
     type: "website",
   },

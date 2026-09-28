@@ -24,8 +24,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Trimagnetix | Innovative Magnetic Solutions",
-  description: "Trimagnetix specializes in advanced magnetic technologies and solutions for medical, industrial, and consumer technology sectors. Discover how our innovative magnetic solutions can transform your projects.",
+  title: "TriMagnetix™ | Innovative Magnetic Solutions",
+  description: "TriMagnetix™ specializes in advanced magnetic technologies and solutions for medical, industrial, and consumer technology sectors. Discover how our innovative magnetic solutions can transform your projects.",
   keywords: ["magnetic solutions", "electromagnetic design", "magnetic materials", "Trimagnetix", "custom magnetics"],
   authors: [{ name: "Trimagnetix Team" }],
   creator: "Trimagnetix",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://trimagnetix.com',
-    siteName: 'Trimagnetix',
-    title: 'Trimagnetix | Innovative Magnetic Solutions',
-    description: 'Trimagnetix specializes in advanced magnetic technologies and solutions for medical, industrial, and consumer technology sectors. Discover how our innovative magnetic solutions can transform your projects.',
+    siteName: 'TriMagnetix™',
+    title: 'TriMagnetix™ | Innovative Magnetic Solutions',
+    description: 'TriMagnetix™ specializes in advanced magnetic technologies and solutions for medical, industrial, and consumer technology sectors. Discover how our innovative magnetic solutions can transform your projects.',
     images: [
       {
         url: '/TriMagnetixLogoWithName.png',
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@trimagnetix',
     creator: '@trimagnetix',
-    title: 'Trimagnetix | Innovative Magnetic Solutions',
-    description: 'Trimagnetix specializes in advanced magnetic technologies and solutions for medical, industrial, and consumer technology sectors.',
+    title: 'TriMagnetix™ | Innovative Magnetic Solutions',
+    description: 'TriMagnetix™ specializes in advanced magnetic technologies and solutions for medical, industrial, and consumer technology sectors.',
     images: ['/TriMagnetixLogoWithName.png'],
   },
   
