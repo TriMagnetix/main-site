@@ -17,11 +17,11 @@ export default function ProgressHero() {
         <div className="bg-gray-900/90 backdrop-blur-md p-8 md:p-12 lg:p-16 rounded-xl shadow-2xl border border-emerald-400/20">
           <AnimateOnScroll animation="scroll-animate">
             <Image
-              src="/trimag-logo-white.png"
+              src="/trimag-logo-white-trimmed.png"
               alt="TriMagnetix™ logo"
-              width={320}
-              height={213}
-              className="h-20 sm:h-28 w-auto mx-auto mb-8"
+              width={1011}
+              height={585}
+              className="h-28 sm:h-40 lg:h-48 w-auto mx-auto mb-8"
               priority
             />
           </AnimateOnScroll>
