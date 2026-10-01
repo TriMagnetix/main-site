@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiCheck, FiDollarSign, FiCpu } from 'react-icons/fi';
+import { FiCheck, FiArrowRight, FiCpu } from 'react-icons/fi';
 import AnimateOnScroll from '../AnimateOnScroll';
 
 const phases = [
@@ -35,11 +35,13 @@ export default function RoadmapSection() {
         {/* Headline goal */}
         <AnimateOnScroll animation="scale-up" delay="delay-200">
           <div className="max-w-4xl mx-auto mb-14 bg-gray-900/90 backdrop-blur-md p-8 md:p-10 rounded-xl shadow-2xl border border-emerald-400/20 text-center">
-            <div className="flex items-center justify-center gap-3 mb-2">
-              <FiDollarSign className="text-2xl text-emerald-400" />
-              <span className="font-heading text-2xl md:text-3xl font-bold text-emerald-400">$3M</span>
-              <FiCpu className="text-2xl text-emerald-400" />
-              <span className="font-heading text-2xl md:text-3xl font-bold text-white">1,000 chips</span>
+            <div className="flex items-center justify-center gap-4 mb-2">
+              <span className="font-heading text-3xl md:text-4xl font-bold text-emerald-400">$3M</span>
+              <FiArrowRight className="text-2xl text-emerald-400" />
+              <span className="inline-flex items-center gap-2">
+                <FiCpu className="text-2xl md:text-3xl text-emerald-400" />
+                <span className="font-heading text-3xl md:text-4xl font-bold text-white">1,000 chips</span>
+              </span>
             </div>
             <p className="text-gray-300 text-lg">
               Our next round funds <span className="highlight-text">1,000 fabricated chips in 18 months</span> — the

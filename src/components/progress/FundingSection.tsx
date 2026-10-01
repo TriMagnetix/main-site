@@ -4,10 +4,12 @@ import { FiArrowRight, FiZap } from 'react-icons/fi';
 import AnimateOnScroll from '../AnimateOnScroll';
 
 const backers = [
-  { logo: '/partners/snocap.png', name: 'SNOCAP', white: true },
-  { logo: '/partners/actuate.png', name: 'Actuate Ventures', white: true },
-  { logo: '/progress/pnw-battery.jpg', name: 'PNW Battery Collaborative', white: false },
-  { logo: '/partners/BetterwayFilled.png', name: 'BetterWay', white: true },
+  // SNOCAP's mark is a two-tone split square (white/black), so it needs a
+  // dark backing tile; the other logos are dark-on-transparent and sit on white.
+  { logo: '/partners/snocap.png', name: 'SNOCAP', dark: true },
+  { logo: '/partners/actuate.png', name: 'Actuate Ventures', dark: false },
+  { logo: '/progress/pnw-battery.jpg', name: 'PNW Battery Collaborative', dark: false },
+  { logo: '/partners/BetterwayFilled.png', name: 'BetterWay', dark: false },
 ];
 
 const outcomeGroups = [
@@ -50,7 +52,7 @@ export default function FundingSection() {
           {backers.map((backer, index) => (
             <AnimateOnScroll key={backer.name} animation="slide-up" delay={(['delay-100', 'delay-200', 'delay-300', 'delay-400'] as const)[index]}>
               <div className="gradient-card rounded-lg hover-card h-full flex flex-col items-center justify-center p-6">
-                <div className="bg-white rounded-md p-3 flex items-center justify-center h-16 w-full mb-3 shadow">
+                <div className={`${backer.dark ? 'bg-gray-800' : 'bg-white'} rounded-md p-3 flex items-center justify-center h-16 w-full mb-3 shadow`}>
                   <Image src={backer.logo} alt={`${backer.name} logo`} width={110} height={40} className="max-h-10 max-w-[80%] object-contain" />
                 </div>
                 <p className="text-gray-400 text-xs text-center">{backer.name}</p>

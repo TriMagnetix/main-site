@@ -109,7 +109,7 @@ export default function TechnologySection() {
                 alt="Scanning electron micrograph of the fabricated NML triangle"
                 width={600}
                 height={400}
-                className="w-full h-56 object-cover"
+                className="w-full aspect-[3/2] object-cover"
               />
               <figcaption className="caption-text px-4 py-3 text-left">
                 Patented NML triangle — fabricated at 64 nm
@@ -122,9 +122,9 @@ export default function TechnologySection() {
               <Image
                 src="/progress/nml-simulation.jpg"
                 alt="Micromagnetic simulation of the NML triangle"
-                width={690}
+                width={585}
                 height={390}
-                className="w-full h-56 object-cover"
+                className="w-full aspect-[3/2] object-cover"
               />
               <figcaption className="caption-text px-4 py-3 text-left">
                 NML logic simulation
@@ -134,18 +134,13 @@ export default function TechnologySection() {
 
           <AnimateOnScroll animation="slide-up" delay="delay-300">
             <figure className="gradient-card rounded-lg overflow-hidden hover-card h-full">
-              <div
-                className="h-56 overflow-hidden"
-                style={{ clipPath: 'polygon(11% 0, 100% 0, 100% 100%, 0 100%, 0 13%)' }}
-              >
-                <Image
-                  src="/progress/cleanroom.jpg"
-                  alt="Engineers in cleanroom suits at the Washington Nanofabrication Facility"
-                  width={420}
-                  height={750}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <Image
+                src="/progress/cleanroom.jpg"
+                alt="Engineers in cleanroom suits at the Washington Nanofabrication Facility"
+                width={750}
+                height={500}
+                className="w-full aspect-[3/2] object-cover"
+              />
               <figcaption className="caption-text px-4 py-3 text-left">
                 Fabrication at the Washington Nanofabrication Facility (WNF)
               </figcaption>
