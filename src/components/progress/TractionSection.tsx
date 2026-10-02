@@ -30,7 +30,8 @@ const lois = [
   },
 ];
 
-const evaluations = ['NY Creates', 'WaveWorks', 'ST Micro', 'Siemens', 'Bosch'];
+const evaluations = ['Nvidia Inception', 'CDL', 'Plug & Play Semiconductor', "Florida Semicondutor Engine"];
+const evaluation_websites = ["https://www.nvidia.com/en-us/startups/", "https://creativedestructionlab.com", "https://www.plugandplaytechcenter.com/industries/semiconductors", "https://semiconductorengine.org", "https://ny-creates.org"]
 
 export default function TractionSection() {
   return (
@@ -44,8 +45,7 @@ export default function TractionSection() {
 
         <AnimateOnScroll animation="fade-in" delay="delay-200">
           <p className="max-w-3xl mx-auto text-center text-gray-300 mb-12">
-            Letters of Intent signed with teams deploying hardware exactly where CMOS struggles most — and our first
-            paid contract already in the books.
+            Our first paid contract already in the books.
           </p>
         </AnimateOnScroll>
 
@@ -61,6 +61,12 @@ export default function TractionSection() {
               powered, non-volatile IoT devices on TriMagnetix™ nanomagnetic processors.
             </p>
           </div>
+        </AnimateOnScroll>
+
+        <AnimateOnScroll animation="fade-in" delay="delay-200">
+          <p className="max-w-3xl mx-auto text-center text-gray-300 mb-12">
+            Letters of Intent signed with teams deploying hardware exactly where CMOS struggles most.
+          </p>
         </AnimateOnScroll>
 
         {/* LOI cards */}
@@ -84,15 +90,15 @@ export default function TractionSection() {
         {/* Evaluations */}
         <AnimateOnScroll animation="fade-in" delay="delay-400">
           <div className="max-w-4xl mx-auto mt-12 text-center">
-            <p className="text-gray-400 text-sm tracking-wider uppercase mb-4">Active Technical Evaluations</p>
+            <p className="text-gray-400 text-sm tracking-wider uppercase mb-4">Members of and supported by:</p>
             <div className="flex flex-wrap justify-center gap-3">
-              {evaluations.map((name) => (
-                <span
+              {evaluations.map((name, index) => (
+                <a href={evaluation_websites[index]}
                   key={name}
                   className="bg-gray-900/70 border border-emerald-400/20 rounded-full px-5 py-2 text-sm text-gray-200"
                 >
                   {name}
-                </span>
+                </a>
               ))}
             </div>
             <p className="text-gray-400 text-sm mt-6 max-w-2xl mx-auto">
