@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @import '../styles/patterns.css';
-@import '../styles/dividers.css';
 @import '../styles/gradients.css';
 @import '../styles/animations.css';
 @import '../styles/hover-effects.css';

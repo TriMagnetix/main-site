@@ -24,6 +24,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://trimagnetix.com'),
   title: "TriMagnetix™ | Innovative Magnetic Solutions",
   description: "TriMagnetix™ specializes in advanced magnetic technologies and solutions for medical, industrial, and consumer technology sectors. Discover how our innovative magnetic solutions can transform your projects.",
   keywords: ["magnetic solutions", "electromagnetic design", "magnetic materials", "Trimagnetix", "custom magnetics"],
@@ -43,10 +44,10 @@ export const metadata: Metadata = {
     description: 'TriMagnetix™ specializes in advanced magnetic technologies and solutions for medical, industrial, and consumer technology sectors. Discover how our innovative magnetic solutions can transform your projects.',
     images: [
       {
-        url: '/TriMagnetixLogoWithName.png',
-        width: 1200,
-        height: 630,
-        alt: 'Trimagnetix Logo',
+        url: '/trimag-logo-white-with-black-bg.jpg',
+        width: 2501,
+        height: 1667,
+        alt: 'TriMagnetix logo',
       },
     ],
   },
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     creator: '@trimagnetix',
     title: 'TriMagnetix™ | Innovative Magnetic Solutions',
     description: 'TriMagnetix™ specializes in advanced magnetic technologies and solutions for medical, industrial, and consumer technology sectors.',
-    images: ['/TriMagnetixLogoWithName.png'],
+    images: ['/trimag-logo-white-with-black-bg.jpg'],
   },
   
   icons: {

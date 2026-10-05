@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import SectionDivider from './SectionDivider';
 import AnimateOnScroll from './AnimateOnScroll';
 
 export default function AboutSection() {

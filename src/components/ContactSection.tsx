@@ -1,5 +1,4 @@
 import React from 'react';
-import SectionDivider from './SectionDivider';
 import AnimateOnScroll from './AnimateOnScroll';
 
 export default function ContactSection() {

@@ -10,11 +10,12 @@ This is a modern, responsive website built with:
 - Tailwind CSS
 - ESLint
 
-The site features four main sections:
+The site features five main sections:
 - Hero: Company introduction and call-to-action
-- About: Brief company description
-- Services: Key offerings
-- Contact: Contact information and form
+- About: Mission and pull-quote
+- Products: Key technology offerings
+- Partners: Auto-generated logo marquee
+- Contact: Call-to-action to get in touch
 
 ## Development
 

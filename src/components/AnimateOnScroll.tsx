@@ -5,8 +5,8 @@ import { useIntersectionObserver, useScrollAnimation } from '../hooks/useInterse
 
 interface AnimateOnScrollProps {
   children: ReactNode;
-  animation?: 'fade-in' | 'slide-up' | 'slide-left' | 'slide-right' | 'scale-up' | 'scroll-animate';
-  delay?: 'delay-100' | 'delay-200' | 'delay-300' | 'delay-400' | 'delay-500' | 'delay-1' | 'delay-2' | 'delay-3';
+  animation?: 'fade-in' | 'slide-up' | 'scale-up' | 'scroll-animate';
+  delay?: 'delay-100' | 'delay-200' | 'delay-300' | 'delay-400' | 'delay-1' | 'delay-2';
   threshold?: number;
   rootMargin?: string;
   className?: string;

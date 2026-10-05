@@ -31,6 +31,8 @@ export default function CanvasBackground() {
     const traceWidth = 1;
     const chipChance = 0.1;
     const connectionChance = 0.4;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let rafId: number | null = null;
 
     // Mouse tracking
     const mouse = { x: -9999, y: -9999 };
@@ -145,9 +147,11 @@ export default function CanvasBackground() {
       ctx.stroke();
     }
 
-    // Animation Loop
-    function animate() {
+    // Animation Loop - returns true while any node is still moving
+    function animate(): boolean {
       ctx.clearRect(0, 0, width, height);
+
+      let animating = false;
 
       nodes.forEach((node) => {
         // Mouse Interaction
@@ -158,6 +162,7 @@ export default function CanvasBackground() {
         let targetOpacity = baseOpacity;
 
         if (dist < magneticRadius) {
+          animating = true;
           const proximity = (magneticRadius - dist) / magneticRadius;
           targetOpacity = proximity * (maxOpacity - baseOpacity) + baseOpacity;
 
@@ -168,6 +173,9 @@ export default function CanvasBackground() {
           node.pulse = 0;
         }
 
+        if (Math.abs(targetOpacity - node.opacity) > 0.001) {
+          animating = true;
+        }
         node.opacity += (targetOpacity - node.opacity) * 0.1;
         node.opacity = Math.max(baseOpacity, Math.min(maxOpacity, node.opacity));
 
@@ -206,7 +214,26 @@ export default function CanvasBackground() {
         }
       });
 
-      requestAnimationFrame(animate);
+      return animating;
+    }
+
+    // Runs while nodes are moving; the loop stops on its own once settled
+    // or when the tab is hidden. Restarted by mousemove/resize/visibility.
+    function frame() {
+      const animating = animate();
+      rafId = animating && !document.hidden ? requestAnimationFrame(frame) : null;
+    }
+
+    function start() {
+      if (reducedMotion || rafId !== null || document.hidden) return;
+      rafId = requestAnimationFrame(frame);
+    }
+
+    function stop() {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
     }
 
     // Event Listeners
@@ -216,11 +243,18 @@ export default function CanvasBackground() {
       canvas.width = width;
       canvas.height = height;
       initNodes();
+      stop();
+      if (reducedMotion) {
+        animate();
+      } else {
+        start();
+      }
     };
 
     const handleMouseMove = (e: MouseEvent) => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
+      start();
     };
 
     const handleMouseOut = () => {
@@ -228,19 +262,36 @@ export default function CanvasBackground() {
       mouse.y = -9999;
     };
 
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseout', handleMouseOut);
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stop();
+      } else {
+        start();
+      }
+    };
 
-    // Start
+    window.addEventListener('resize', handleResize);
+    if (!reducedMotion) {
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseout', handleMouseOut);
+    }
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Start (or draw a single static frame for reduced-motion users)
     initNodes();
-    animate();
+    if (reducedMotion) {
+      animate();
+    } else {
+      start();
+    }
 
     // Cleanup
     return () => {
+      stop();
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseout', handleMouseOut);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
 

@@ -1,5 +1,7 @@
 # Product Requirements Document (PRD)
 
+> **Status note (2026-10):** This document preserves the *original* spec and is kept for reference. The live site has since evolved — it is now a Next.js + TypeScript app with five sections (Hero, About, Products, Partners, Contact), a dark theme, an animated canvas background, and build-time partner-logo discovery. See [`status.md`](./status.md) for the current state.
+
 ## Project Title
 Company Web Presence – Static Site
 

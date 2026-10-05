@@ -1,5 +1,4 @@
 import React from 'react';
-import SectionDivider from './SectionDivider';
 import { FiCpu, FiBattery, FiShield } from 'react-icons/fi';
 import AnimateOnScroll from './AnimateOnScroll';
 
@@ -23,7 +22,7 @@ export default function ProductsSection() {
   ];
 
   // Function to get delay based on index
-  const getDelayClass = (index: number): "delay-100" | "delay-200" | "delay-300" | "delay-400" | "delay-500" => {
+  const getDelayClass = (index: number): "delay-200" | "delay-300" | "delay-400" => {
     switch (index) {
       case 0: return "delay-200";
       case 1: return "delay-300";
