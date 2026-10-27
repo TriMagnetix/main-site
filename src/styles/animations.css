@@ -104,3 +104,80 @@
 .delay-500 {
   transition-delay: 500ms;
 }
+
+/* Company logos scrolling inside the partners card */
+.partner-marquee {
+  overflow: hidden;
+  width: auto;
+  margin-inline: -2rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+@media (min-width: 768px) {
+  .partner-marquee {
+    margin-inline: -3rem;
+  }
+}
+
+.partner-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: partner-marquee 45s linear infinite;
+}
+
+.partner-marquee:hover .partner-marquee-track {
+  animation-play-state: paused;
+}
+
+.partner-marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+  padding: 0 4.5rem 0 0;
+  list-style: none;
+  margin: 0;
+}
+
+.partner-logo {
+  position: relative;
+  flex-shrink: 0;
+  height: 5.5rem;
+  width: 11rem;
+}
+
+@keyframes partner-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partner-marquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+    margin-inline: 0;
+  }
+
+  .partner-marquee-track {
+    animation: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .partner-marquee-group[aria-hidden='true'],
+  .partner-logo-repeat {
+    display: none;
+  }
+
+  .partner-marquee-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0;
+    padding-inline: 1.5rem;
+    row-gap: 2.5rem;
+  }
+}
