@@ -1,38 +1,21 @@
 import React from 'react';
 import Image from 'next/image';
-import { FiArrowRight, FiZap } from 'react-icons/fi';
 import AnimateOnScroll from '../AnimateOnScroll';
 
 const backers = [
-  // SNOCAP's mark is a two-tone split square (white/black), so it needs a
-  // dark backing tile; the other logos are dark-on-transparent and sit on white.
+  // Light-on-transparent marks need a dark backing tile; the rest are
+  // dark-on-transparent and sit on white.
+  { logo: '/partners/acequia.png', name: 'Acequia Capital', dark: true },
+  { logo: '/partners/athenaeum.png', name: 'Athenaeum', dark: true },
   { logo: '/partners/snocap.png', name: 'SNOCAP', dark: true },
   { logo: '/partners/actuate.png', name: 'Actuate Ventures', dark: false },
-  { logo: '/progress/pnw-battery.jpg', name: 'PNW Battery Collaborative', dark: false },
   { logo: '/partners/BetterwayFilled.png', name: 'BetterWay', dark: false },
-];
-
-const outcomeGroups = [
-  {
-    backers: 'SNOCAP + Actuate Ventures',
-    items: [
-      'V1 250 nm prototype in 6 months — 20x power reduction',
-      'V2 64 nm prototype 2 months later — 800x power reduction',
-    ],
-  },
-  {
-    backers: 'PNW Battery Collaborative + BetterWay',
-    items: [
-      '1-week chip fabrication turnaround',
-      'Prototype delivery to customers',
-      'R&D on majority-gate-based adders',
-    ],
-  },
+  { logo: '/progress/pnw-battery.jpg', name: 'PNW Battery Collaborative', dark: false },
 ];
 
 export default function FundingSection() {
   return (
-    <section id="funding" className="section-padding magnetic-dots relative">
+    <section id="funding" className="section-padding wave-pattern relative">
       <div className="container mx-auto px-4 md:px-8">
         <AnimateOnScroll animation="fade-in" delay="delay-100">
           <div className="text-center mb-6">
@@ -42,42 +25,19 @@ export default function FundingSection() {
 
         <AnimateOnScroll animation="fade-in" delay="delay-200">
           <p className="max-w-3xl mx-auto text-center text-gray-300 mb-12">
-            Backed by defense innovation, venture, and applied research organizations — with every dollar tied to a
-            shipped milestone.
+            Backed by venture, angel, and applied research partners — with every dollar tied to a shipped milestone.
           </p>
         </AnimateOnScroll>
 
         {/* Backers */}
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
           {backers.map((backer, index) => (
-            <AnimateOnScroll key={backer.name} animation="slide-up" delay={(['delay-100', 'delay-200', 'delay-300', 'delay-400'] as const)[index]}>
+            <AnimateOnScroll key={backer.name} animation="slide-up" delay={(['delay-100', 'delay-200', 'delay-300'] as const)[index % 3]}>
               <div className="gradient-card rounded-lg hover-card h-full flex flex-col items-center justify-center p-6">
                 <div className={`${backer.dark ? 'bg-gray-800' : 'bg-white'} rounded-md p-3 flex items-center justify-center h-16 w-full mb-3 shadow`}>
-                  <Image src={backer.logo} alt={`${backer.name} logo`} width={110} height={40} className="max-h-10 max-w-[80%] object-contain" />
+                  <Image src={backer.logo} alt={`${backer.name} logo`} width={160} height={48} className="max-h-10 max-w-[80%] object-contain" />
                 </div>
                 <p className="text-gray-400 text-xs text-center">{backer.name}</p>
-              </div>
-            </AnimateOnScroll>
-          ))}
-        </div>
-
-        {/* Outcomes */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          {outcomeGroups.map((group, index) => (
-            <AnimateOnScroll key={group.backers} animation="slide-up" delay={index === 0 ? 'delay-200' : 'delay-300'}>
-              <div className="bg-gray-900/70 border border-emerald-400/15 rounded-lg p-8 h-full">
-                <div className="flex items-center gap-2 mb-5">
-                  <FiZap className="text-emerald-400" />
-                  <h3 className="font-heading text-lg font-semibold text-white">{group.backers}</h3>
-                </div>
-                <ul className="space-y-3">
-                  {group.items.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-gray-300">
-                      <FiArrowRight className="text-emerald-400 mt-1 shrink-0" />
-                      <span className="text-base">{item}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </AnimateOnScroll>
           ))}

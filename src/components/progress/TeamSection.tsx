@@ -4,26 +4,30 @@ import AnimateOnScroll from '../AnimateOnScroll';
 
 const founders = [
   {
-    name: 'Lucas Hahn',
-    role: 'Co-Founder & CEO',
-    photo: '/progress/team-lucas.jpg',
-    background: 'AWS · Purdue · MTS',
-  },
-  {
     name: 'Madison Hanberry',
-    role: 'Co-Founder & CTO',
+    role: 'Co-Founder & CEO',
+    focus: 'Technical Development',
     photo: '/progress/team-madison.jpg',
     background: 'AWS · Georgia Tech · UW',
   },
   {
+    name: 'Lucas Hahn',
+    role: 'Co-Founder & CSO',
+    focus: 'Fundraising & Partnerships',
+    photo: '/progress/team-lucas.jpg',
+    background: 'AWS · Purdue · MTS',
+  },
+  {
     name: 'Pranav Jain',
     role: 'Co-Founder & COO',
+    focus: 'Sales & Operations',
     photo: '/progress/team-pranav.jpg',
     background: 'Microsoft · Penn State',
   },
   {
     name: 'Aspen White',
-    role: 'Co-Founder & CSO',
+    role: 'Co-Founder & CBO',
+    focus: 'Administration',
     photo: '/progress/team-aspen.jpg',
     background: 'T-Mobile',
   },
@@ -32,19 +36,19 @@ const founders = [
 const advisors = [
   {
     name: 'Alexander Kozhanov',
-    focus: 'Nanomagnetism & Spintronics',
+    focus: 'Leading Spintronics Professor',
     photo: '/progress/advisor-kozhanov.jpg',
     background: 'Duke · Caltech',
   },
   {
     name: 'Clayton Barnard',
-    focus: 'GTM & Commercial Strategy',
+    focus: 'VP at Bleeding-Edge Silicon Companies',
     photo: '/progress/advisor-barnard.jpg',
     background: 'Cisco · Proofpoint · Lookout',
   },
   {
     name: 'Hans Fangohr',
-    focus: 'Computational Micromagnetism',
+    focus: 'Pioneer of Computational Micromagnetics',
     photo: '/progress/advisor-fangohr.jpg',
     background: 'UC Berkeley',
   },
@@ -56,7 +60,7 @@ export default function TeamSection() {
       <div className="container mx-auto px-4 md:px-8">
         <AnimateOnScroll animation="fade-in" delay="delay-100">
           <div className="text-center mb-12">
-            <h2 className="section-title gradient-section-header">The Team</h2>
+            <h2 className="section-title gradient-section-header">Core Innovators</h2>
           </div>
         </AnimateOnScroll>
 
@@ -70,10 +74,11 @@ export default function TeamSection() {
                   alt={`Portrait of ${member.name}`}
                   width={200}
                   height={200}
-                  className="rounded-full h-32 w-32 object-cover border-2 border-emerald-400/40 mb-4"
+                  className="rounded-full h-24 w-24 sm:h-32 sm:w-32 shrink-0 object-cover border-2 border-emerald-400/40 mb-4"
                 />
                 <h3 className="font-heading text-lg font-semibold text-white">{member.name}</h3>
-                <p className="text-emerald-400 text-sm font-medium mt-1 mb-2">{member.role}</p>
+                <p className="text-emerald-400 text-sm font-medium mt-1">{member.role}</p>
+                <p className="text-gray-300 text-xs mb-2">{member.focus}</p>
                 <p className="text-gray-400 text-xs">{member.background}</p>
               </div>
             </AnimateOnScroll>

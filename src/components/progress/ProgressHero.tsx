@@ -5,9 +5,9 @@ import AnimateOnScroll from '../AnimateOnScroll';
 
 const heroStats = [
   { value: '800x', label: 'Lower power use vs CMOS' },
-  { value: '64 nm', label: 'Devices in fabrication' },
-  { value: 'Zero', label: 'Standby power loss' },
-  { value: 'TRL 4', label: 'Architecture validated' },
+  { value: 'Non-Volatile', label: 'Supports In-Memory Compute' },
+  { value: 'Rad-Hard', label: 'Naturally Radiation-Resistant' },
+  { value: 'Paid', label: 'Pilot with WaveWorks' },
 ];
 
 export default function ProgressHero() {
@@ -28,7 +28,7 @@ export default function ProgressHero() {
 
           <AnimateOnScroll animation="scroll-animate">
             <p className="text-emerald-400 tracking-super-wide uppercase text-xs sm:text-sm font-semibold mb-4">
-              Technical &amp; Business Progress
+              Technical Progress &amp; Traction
             </p>
           </AnimateOnScroll>
 
@@ -41,8 +41,9 @@ export default function ProgressHero() {
           <AnimateOnScroll animation="scroll-animate" delay="delay-2">
             <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
               TriMagnetix™ is developing a new class of <span className="highlight-text">nanomagnetic processors</span>. Our
-              custom Nanomagnetic Logic (NML) architecture delivers proven 800x lower power use, zero standby loss, and
-              ultra-low heat output — ideal for remote sensing, dense edge computing, and AI / data center workloads.
+              custom Nanomagnetic Logic (NML) architecture delivers proven 800x lower power use,{' '}
+              <span className="highlight-text">non-volatile</span> operation with zero standby loss,{' '}
+              <span className="highlight-text">radiation resistance</span>, and ultra-low heat output — ideal for remote sensing, dense edge computing, and AI / data center workloads.
             </p>
           </AnimateOnScroll>
 
