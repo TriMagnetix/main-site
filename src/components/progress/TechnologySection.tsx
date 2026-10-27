@@ -35,7 +35,7 @@ const pillars = [
   {
     title: 'Architecture Validated',
     description:
-      'TRL 4 — the NML logic concept is demonstrated on real, fabricated devices, not just simulation.',
+      'TRL 4-5: The NML logic concept is demonstrated on real, fabricated devices, not just simulation.',
     icon: <FiCheckCircle className="text-4xl text-emerald-400 mb-4 hover-icon" />,
   },
 ];
@@ -85,7 +85,7 @@ const details = [
 
 export default function TechnologySection() {
   return (
-    <section id="technology" className="section-padding wave-pattern relative">
+    <section id="technology" className="section-padding magnetic-dots relative">
       <div className="container mx-auto px-4 md:px-8">
         <AnimateOnScroll animation="fade-in" delay="delay-100">
           <div className="text-center mb-6">
