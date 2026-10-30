@@ -7,7 +7,6 @@ import EnergyImpactSection from "@/components/progress/EnergyImpactSection";
 import TechnologySection from "@/components/progress/TechnologySection";
 import StatusSection from "@/components/progress/StatusSection";
 import TractionSection from "@/components/progress/TractionSection";
-import FundingSection from "@/components/progress/FundingSection";
 import TeamSection from "@/components/progress/TeamSection";
 import ContactSection from "@/components/ContactSection";
 
@@ -40,9 +39,8 @@ export default function ProgressPage() {
         <TechnologySection />
         <StatusSection />
         <TractionSection />
-        <FundingSection />
         <TeamSection />
-        <ContactSection pattern="wave-pattern" />
+        <ContactSection />
       </main>
       <Footer />
     </>
