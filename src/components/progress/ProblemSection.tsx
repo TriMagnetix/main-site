@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import AnimateOnScroll from '../AnimateOnScroll';
 
 const problemStats = [
@@ -34,18 +33,23 @@ export default function ProblemSection() {
         </AnimateOnScroll>
 
         <AnimateOnScroll animation="fade-in" delay="delay-200">
-          <div className="max-w-5xl mx-auto mb-12 rounded-xl overflow-hidden border border-emerald-400/20 shadow-2xl">
-            <Image
-              src="/progress/problem-chip.jpg"
-              alt="Close-up of a high-density AI chip"
-              width={1860}
-              height={280}
-              className="w-full h-56 md:h-80 object-cover"
+          <figure className="max-w-5xl mx-auto mb-12 rounded-xl overflow-hidden border border-emerald-400/20 shadow-2xl bg-black">
+            <video
+              className="w-full aspect-video"
+              src="/progress/ai-energy-demand.mp4"
+              poster="/progress/ai-energy-demand-poster.jpg"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Animation: AI chips double every 9 months, energy doesn't. World data center electricity use grows from 415 TWh in 2024 to a projected 945 TWh in 2030, more than all of Japan uses today. In the US, data centers could use one in every five kilowatt-hours by 2035, up from about 6% today."
             />
-            <p className="caption-text px-6 py-3 text-left bg-gray-900/80">
-              AI silicon keeps getting denser — while energy, heat, and resilience constraints stay constant.
-            </p>
-          </div>
+            <figcaption className="caption-text px-6 py-3 text-left bg-gray-900/80">
+              AI demand is set to more than double data center electricity use by 2030. Sources: IEA, Energy and AI
+              (2025); BloombergNEF (2026).
+            </figcaption>
+          </figure>
         </AnimateOnScroll>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">

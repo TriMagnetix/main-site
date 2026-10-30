@@ -56,7 +56,7 @@ const advisors = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="section-padding magnetic-dots relative">
+    <section id="team" className="section-padding wave-pattern relative">
       <div className="container mx-auto px-4 md:px-8">
         <AnimateOnScroll animation="fade-in" delay="delay-100">
           <div className="text-center mb-12">

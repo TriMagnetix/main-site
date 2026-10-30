@@ -34,8 +34,20 @@ const lois = [
   },
 ];
 
-// The NVIDIA mark ships on its own white plate; the rest are light-on-transparent.
-const programs = [
+// Investors and partners first, then programs. Every mark is light-on-transparent on a dark
+// tile, except NVIDIA's, which ships on its own white plate.
+type Org = { name: string; logo: string; dark: boolean; url?: string };
+
+const backers: Org[] = [
+  { name: 'Acequia Capital', logo: '/partners/acequia.png', dark: true },
+  { name: 'Athenaeum', logo: '/partners/athenaeum.png', dark: true },
+  { name: 'SNOCAP', logo: '/partners/snocap.png', dark: true },
+  { name: 'Actuate Ventures', logo: '/partners/actuate.svg', dark: true },
+  { name: 'BetterWay', logo: '/partners/betterway.png', dark: true },
+  { name: 'PNW Battery Collaborative', logo: '/partners/pnw-battery.png', dark: true },
+];
+
+const programs: Org[] = [
   { name: 'NVIDIA Inception', logo: '/partners/nvidia-inception.png', url: 'https://www.nvidia.com/en-us/startups/', dark: false },
   { name: 'Creative Destruction Lab', logo: '/partners/cdl.png', url: 'https://creativedestructionlab.com', dark: true },
   { name: 'Plug and Play Semiconductors', logo: '/partners/plugandplay-semi.png', url: 'https://www.plugandplaytechcenter.com/industries/semiconductors', dark: true },
@@ -106,25 +118,31 @@ export default function TractionSection() {
           ))}
         </div>
 
-        {/* Programs */}
+        {/* Backers and programs */}
         <AnimateOnScroll animation="fade-in" delay="delay-400">
-          <div className="max-w-5xl mx-auto mt-14 text-center">
-            <p className="text-gray-400 text-sm tracking-wider uppercase mb-6">Members of and supported by</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {programs.map((program) => (
-                <a
-                  key={program.name}
-                  href={program.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="gradient-card rounded-lg hover-card p-4 flex flex-col items-center justify-center"
-                >
-                  <div className={`${program.dark ? 'bg-gray-800' : 'bg-white'} rounded-md p-3 flex items-center justify-center h-20 w-full mb-3 shadow`}>
-                    <Image src={program.logo} alt={`${program.name} logo`} width={180} height={64} className="max-h-14 max-w-[90%] object-contain" />
+          <div className="max-w-6xl mx-auto mt-14 text-center">
+            <p className="text-gray-400 text-sm tracking-wider uppercase mb-6">Backed and supported by</p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[...backers, ...programs].map((org) => {
+                const tile = (
+                  <>
+                    <div className={`${org.dark ? 'bg-gray-800' : 'bg-white'} rounded-md p-3 flex items-center justify-center h-20 w-full mb-3 shadow`}>
+                      <Image src={org.logo} alt={`${org.name} logo`} width={180} height={64} className="max-h-14 max-w-[90%] object-contain" />
+                    </div>
+                    <span className="text-gray-400 text-xs text-center">{org.name}</span>
+                  </>
+                );
+                const className = 'gradient-card rounded-lg hover-card p-4 flex flex-col items-center justify-center';
+                return org.url ? (
+                  <a key={org.name} href={org.url} target="_blank" rel="noreferrer" className={className}>
+                    {tile}
+                  </a>
+                ) : (
+                  <div key={org.name} className={className}>
+                    {tile}
                   </div>
-                  <span className="text-gray-400 text-xs text-center">{program.name}</span>
-                </a>
-              ))}
+                );
+              })}
             </div>
           </div>
         </AnimateOnScroll>
