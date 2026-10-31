@@ -2,7 +2,7 @@ import React from 'react';
 import AnimateOnScroll from '../AnimateOnScroll';
 
 const impactStats = [
-  { value: '1 GW', label: 'A hyperscale AI datacenter — 5,000 racks at 200 kW' },
+  { value: '1 GW', label: 'A hyperscale AI datacenter: 5,000 racks at 200 kW' },
   { value: '1.25 MW', label: 'The same compute on TriMagnetix™ NML' },
   { value: '≈833,000 → 1,040', label: 'Average US homes worth of power' },
 ];
@@ -19,8 +19,8 @@ export default function EnergyImpactSection() {
 
         <AnimateOnScroll animation="fade-in" delay="delay-200">
           <p className="max-w-3xl mx-auto text-center text-gray-300 mb-12">
-            Take a 1 GW AI datacenter like Meta&apos;s campus in Lebanon, Indiana. Run the same workload on{' '}
-            <span className="highlight-text">nanomagnetic logic</span> and its 5,000 racks collapse to just 6.25.
+            Take a 1 GW AI datacenter, like Meta&apos;s campus in Lebanon, Indiana. Run on{' '}
+            <span className="highlight-text">nanomagnetic logic</span>, and 5,000 racks shrink to 6.25.
           </p>
         </AnimateOnScroll>
 
@@ -35,7 +35,7 @@ export default function EnergyImpactSection() {
               loop
               playsInline
               preload="metadata"
-              aria-label="Animation: a grid of 5,000 datacenter racks drawing 1 GW collapses to 6.25 racks drawing 1.25 MW on TriMagnetix — 800 times less energy"
+              aria-label="Animation: a grid of 5,000 datacenter racks drawing 1 GW collapses to 6.25 racks drawing 1.25 MW on TriMagnetix, using 800 times less energy"
             />
             <figcaption className="caption-text px-6 py-3 text-left bg-gray-900/80">
               Each square is one 200 kW rack. Same datacenter, 800x less energy.

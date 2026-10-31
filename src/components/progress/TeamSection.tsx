@@ -6,7 +6,7 @@ const founders = [
   {
     name: 'Madison Hanberry',
     role: 'Co-Founder & CEO',
-    focus: 'Technical Development',
+    focus: 'Core Technical Development',
     photo: '/progress/team-madison.jpg',
     background: 'AWS · Georgia Tech · UW',
   },
@@ -19,26 +19,26 @@ const founders = [
   },
   {
     name: 'Pranav Jain',
-    role: 'Co-Founder & COO',
-    focus: 'Sales & Operations',
+    role: 'Co-Founder & CTO',
+    focus: 'Technology, Operations & Sales',
     photo: '/progress/team-pranav.jpg',
-    background: 'Microsoft · Penn State',
+    background: 'Anduril · Microsoft · D.A.T.A. Lab',
   },
   {
     name: 'Aspen White',
     role: 'Co-Founder & CBO',
     focus: 'Administration',
     photo: '/progress/team-aspen.jpg',
-    background: 'T-Mobile',
+    background: 'AerwareAI · Founder Institute · T-Mobile',
   },
 ];
 
 const advisors = [
   {
     name: 'Alexander Kozhanov',
-    focus: 'Leading Spintronics Professor',
+    focus: 'Leading Spintronics/Nanomagnetics Researcher',
     photo: '/progress/advisor-kozhanov.jpg',
-    background: 'Duke · Caltech',
+    background: 'Duke · UC Berkeley',
   },
   {
     name: 'Clayton Barnard',
@@ -50,7 +50,7 @@ const advisors = [
     name: 'Hans Fangohr',
     focus: 'Pioneer of Computational Micromagnetics',
     photo: '/progress/advisor-fangohr.jpg',
-    background: 'UC Berkeley',
+    background: 'Max Planck Institute',
   },
 ];
 

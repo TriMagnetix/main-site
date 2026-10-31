@@ -7,28 +7,28 @@ const lois = [
   {
     logo: '/partners/starcloud.png',
     name: 'Starcloud',
-    description: 'Orbital processors — compute in space, where power and thermal margins are extreme.',
+    description: 'Orbital processors, where power and heat budgets are tight.',
     icon: <FiCpu className="text-emerald-400" />,
     dark: false,
   },
   {
     logo: '/partners/crow.png',
     name: 'Crow Industries',
-    description: 'Rugged autonomous ground systems — fielded hardware far from reliable power.',
+    description: 'Rugged autonomous ground systems & rovers that run far from reliable power.',
     icon: <FiTruck className="text-emerald-400" />,
     dark: true,
   },
   {
     logo: '/partners/Pheratech.png',
     name: 'Pheratech',
-    description: 'Low-powered autonomous robotics — fielded autonomy with months of battery life.',
+    description: 'Low-power autonomous robotics with months of battery life.',
     icon: <FiNavigation className="text-emerald-400" />,
     dark: false,
   },
   {
     logo: '/partners/Coda.png',
     name: 'Coda',
-    description: 'Dense compute infrastructure — cutting energy and cooling load at the rack.',
+    description: 'Dense compute infrastructure with less energy and cooling per rack.',
     icon: <FiServer className="text-emerald-400" />,
     dark: true,
   },
@@ -66,7 +66,7 @@ export default function TractionSection() {
 
         <AnimateOnScroll animation="fade-in" delay="delay-200">
           <p className="max-w-3xl mx-auto text-center text-gray-300 mb-12">
-            Key market LOIs within 3 months — and a paid pilot 2 months after that.
+            Key market LOIs in 3 months. A paid pilot 2 months later.
           </p>
         </AnimateOnScroll>
 
@@ -82,9 +82,9 @@ export default function TractionSection() {
                 <h3 className="font-heading text-xl md:text-2xl font-bold text-white">Paid Pilot with WaveWorks</h3>
               </div>
               <p className="text-gray-300">
-                An ultra-low-power architecture for remotely powered, non-volatile IoT devices — and our{' '}
-                <span className="highlight-text font-semibold">path to a repeatable product</span>. This partnership
-                is taking our technology from <span className="highlight-text font-semibold">TRL 4 to TRL 5</span>.
+                An ultra-low-power architecture for remotely powered, non-volatile IoT devices. This pilot is our {' '}
+                <span className="highlight-text font-semibold">path to a repeatable revenue product</span>, 
+                bringing our technology from <span className="highlight-text font-semibold">TRL 4 to TRL 5</span>.
               </p>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function TractionSection() {
           <div className="text-center mb-10">
             <h3 className="font-heading text-2xl md:text-3xl font-bold text-white">Key Market LOIs</h3>
             <p className="text-gray-400 mt-2">
-              Signed with teams deploying hardware exactly where CMOS struggles most —{' '}
+              Signed with teams building hardware where CMOS struggles most.{' '}
               <span className="highlight-text font-semibold">3+ more in discussion</span>.
             </p>
           </div>

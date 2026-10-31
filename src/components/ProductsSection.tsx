@@ -12,7 +12,7 @@ export default function ProductsSection() {
     },
     {
       title: "Efficiency without Compromise",
-      description: "Engineered to operate with nanosecond pulses, our architecture drastically reduces energy use—ideal for battery-powered devices, IoT, and remote systems.",
+      description: "Runs on nanosecond pulses and cuts energy use dramatically. Ideal for battery-powered devices, IoT, and remote systems.",
       icon: <FiBattery className="text-4xl text-emerald-400 mb-4 hover-icon" />
     },
     {

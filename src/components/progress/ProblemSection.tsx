@@ -6,19 +6,19 @@ const problemStats = [
     value: '9 months',
     title: 'AI chips keep scaling',
     description:
-      'AI chip performance is doubling every 9 months — but energy availability is not. Compute is increasingly limited by power, not speed.',
+      'AI chip performance doubles every 9 months. Power supply doesn\'t. Compute is now limited by energy, not speed.',
   },
   {
     value: '40%',
     title: 'Lost to standby leakage',
     description:
-      'In traditional CMOS embedded systems, standby leakage alone can consume upwards of 40% of the total power budget.',
+      'In CMOS embedded systems, standby leakage alone can eat up to 40% of the power budget.',
   },
   {
     value: 'Silicon',
     title: 'Fails where it matters most',
     description:
-      'For mission-critical edge compute and remote sensing, computational limits are defined by resilience, power availability, and thermal management — not raw speed.',
+      'At the edge and in orbit, the limits are resilience, power, and heat. Raw speed comes second.',
   },
 ];
 
@@ -67,8 +67,8 @@ export default function ProblemSection() {
         <AnimateOnScroll animation="fade-in" delay="delay-400">
           <div className="max-w-3xl mx-auto mt-12 text-center">
             <p className="pull-quote inline-block text-left">
-              Trimagnetix provides a post-CMOS core for mission-critical edge compute and remote sensing rigs by
-              leveraging Nanomagnetic Logic (NML).
+              TriMagnetix cuts compute energy by over 800x core for mission-critical edge compute and remote sensing, by leveraging
+              Nanomagnetic Logic (NML) over traditional electrical CMOS Logic.
             </p>
           </div>
         </AnimateOnScroll>

@@ -11,25 +11,25 @@ const milestones = [
     image: '/progress/wnf-suit.jpg',
     imageAlt: 'Researcher in full cleanroom attire',
     description:
-      'Fabrication through the Washington Nanofabrication Facility (WNF) with a full-time R&D team focused entirely on the NML core.',
+      'We fabricate at the Washington Nanofabrication Facility (WNF), with a full-time R&D team focused on the NML core.',
   },
   {
     step: '02',
-    title: 'V1 — 250 nm Prototype',
+    title: 'V1: 250 nm Prototype',
     elapsed: '+4 months',
     image: '/progress/v1-hex.jpg',
     imageAlt: '250 nanometer prototype chip with hexagonal die layout',
     description:
-      'Our first prototype demonstrated a 20x power reduction versus comparable CMOS — proof that NML logic works on real silicon.',
+      'Our first prototype cut power 20x versus comparable CMOS. Proof that NML logic works on real silicon.',
   },
   {
     step: '03',
-    title: 'V2 — 64 nm Prototype',
+    title: 'V2: 64 nm Prototype',
     elapsed: '+2 months',
     image: '/progress/v2-triangle.jpg',
     imageAlt: 'Scanning electron micrograph of the 64 nanometer NML triangle',
     description:
-      'An 8x scale-down delivered a proven 800x power reduction. The architecture is validated at TRL 4 on fabricated hardware.',
+      'Shrinking features 8x took us to an 800x power reduction, validated at TRL 4 on fabricated hardware.',
   },
 ];
 
@@ -87,10 +87,9 @@ export default function StatusSection() {
         <AnimateOnScroll animation="scale-up" delay="delay-400">
           <div className="max-w-4xl mx-auto mt-12 gradient-card p-8 rounded-lg">
             <p className="text-lg md:text-xl text-gray-300 text-center mb-6">
-              <span className="highlight-text font-semibold">Today:</span> we are fabricating{' '}
-              <span className="highlight-text font-semibold">64 nm devices</span> via cost-effective WNF
-              photolithography — an <span className="highlight-text font-semibold">8x scale improvement</span> over
-              initial expectations.
+              <span className="highlight-text font-semibold">Today:</span> we&apos;re fabricating{' '}
+              <span className="highlight-text font-semibold">64 nm devices</span> with low-cost WNF photolithography,
+              an <span className="highlight-text font-semibold">8x improvement</span> on our original target.
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {now.map((item) => (
