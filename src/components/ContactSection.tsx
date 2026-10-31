@@ -22,8 +22,8 @@ export default function ContactSection({ pattern = 'magnetic-dots' }: ContactSec
         <AnimateOnScroll animation="scale-up" delay="delay-300">
           <div className="max-w-2xl mx-auto text-center gradient-card p-8 md:p-12 rounded-lg hover-card">
             <p className="mb-8 text-gray-300">
-              Ready to bring 800x lower power, zero standby loss, and radiation resilience to your product? Get in touch
-              with our team to discuss your use case or schedule a meeting.
+              Want 800x lower power, zero standby loss, and radiation resistance in your product? Tell us about your use
+              case or book a meeting.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

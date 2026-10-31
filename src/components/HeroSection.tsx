@@ -17,8 +17,8 @@ export default function HeroSection() {
           
           <AnimateOnScroll animation="scroll-animate" delay="delay-1">
             <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-              Revolutionary nanomagnetic technology that merges memory and logic into a single, 
-              ultra-efficient processor—shattering the performance and power barriers of traditional computing.
+              Nanomagnetic technology that combines memory and logic in one ultra-efficient processor, breaking the
+              power limits of traditional computing.
             </p>
           </AnimateOnScroll>
           

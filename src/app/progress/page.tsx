@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TriMagnetix™ - Technical & Business Progress",
     description:
-      "Nanomagnetic processors with 800x lower power, zero standby loss, and ultra-low heat — now in fabrication at 64 nm.",
+      "Nanomagnetic processors with 800x lower power, zero standby loss, and ultra-low heat. Now in fabrication at 64 nm.",
     url: "https://trimagnetix.com/progress",
     siteName: "TriMagnetix™",
     locale: "en_US",
