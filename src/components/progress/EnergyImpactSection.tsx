@@ -49,8 +49,8 @@ export default function EnergyImpactSection() {
         <div><br></br></div>
         <AnimateOnScroll animation="fade-in" delay="delay-200">
           <p className="max-w-3xl mx-auto text-center text-gray-300 mb-12">
-            A 1 GW AI datacenter, like Meta&apos;s campus in Lebanon, Indiana. Run on{' '}
-            nanomagnetic logic, and <span className="highlight-text">5,000 racks shrink to 6.25</span>.
+            A datacenter like Meta&apos;s planned <span className='highlight-text-orange'>1 GW, 5,000 rack</span> campus in Lebanon, Indiana, run on{' '}
+            Trimangetix's Nanomagnetic Logic, uses the energy of <span className="highlight-text">only 6.25 racks</span>.
           </p>
         </AnimateOnScroll>
 
