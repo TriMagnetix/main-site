@@ -5,7 +5,7 @@ import AnimateOnScroll from '../AnimateOnScroll';
 
 const lois = [
   {
-    logo: '/partners/starcloud.png',
+    logo: '/partners/companies/starcloud.png',
     name: 'Starcloud',
     description: 'Orbital processors, where power and heat budgets are tight.',
     icon: <FiCpu className="text-emerald-400" />,
@@ -19,14 +19,14 @@ const lois = [
     dark: true,
   },
   {
-    logo: '/partners/Pheratech.png',
+    logo: '/partners/companies/Pheratech.png',
     name: 'Pheratech',
     description: 'Low-power autonomous robotics with months of battery life.',
     icon: <FiNavigation className="text-emerald-400" />,
     dark: false,
   },
   {
-    logo: '/partners/Coda.png',
+    logo: '/partners/companies/Coda.png',
     name: 'Coda',
     description: 'Dense compute infrastructure with less energy and cooling per rack.',
     icon: <FiServer className="text-emerald-400" />,
@@ -70,7 +70,7 @@ export default function TractionSection() {
         <AnimateOnScroll animation="scale-up" delay="delay-200">
           <div className="max-w-4xl mx-auto mb-14 bg-emerald-400/10 border border-emerald-400/40 rounded-lg p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8">
             <div className="bg-white rounded-lg p-4 flex items-center justify-center h-20 w-48 shrink-0 shadow">
-              <Image src="/partners/WaveWorks.png" alt="WaveWorks logo" width={160} height={48} className="max-h-10 object-contain" />
+              <Image src="/partners/companies/WaveWorks.png" alt="WaveWorks logo" width={160} height={48} className="max-h-10 object-contain" />
             </div>
             <div className="text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-3 mb-2">

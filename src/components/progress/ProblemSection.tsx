@@ -43,7 +43,7 @@ export default function ProblemSection() {
               loop
               playsInline
               preload="metadata"
-              aria-label="Animation: AI chips double every 9 months, energy doesn't. World data center electricity use grows from 415 TWh in 2024 to a projected 945 TWh in 2030, more than all of Japan uses today."
+              aria-label="Animation: AI chips double every 9 months, energy doesn't. A bar chart of worldwide data center electricity use climbs year by year, from 264 TWh in 2020 and 415 TWh in 2024 to a projected 945 TWh in 2030."
             />
             <figcaption className="caption-text px-6 py-3 text-left bg-gray-900/80">
               AI demand is set to more than double data center electricity use by 2030. Source: IEA, Energy and AI
