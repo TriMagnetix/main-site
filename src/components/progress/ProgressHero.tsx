@@ -7,7 +7,7 @@ const heroStats = [
   { value: '800x', label: 'Lower power use vs CMOS' },
   { value: 'Non-Volatile', label: 'Supports In-Memory Compute' },
   { value: 'Rad-Hard', label: 'Naturally Radiation-Resistant' },
-  { value: 'Paid', label: 'Pilot with WaveWorks' },
+  { value: 'Paid Pilot', label: 'NRE contract with WaveWorks' },
 ];
 
 export default function ProgressHero() {

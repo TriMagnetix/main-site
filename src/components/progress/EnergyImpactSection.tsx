@@ -13,14 +13,16 @@ export default function EnergyImpactSection() {
       <div className="container mx-auto px-4 md:px-8">
         <AnimateOnScroll animation="fade-in" delay="delay-100">
           <div className="text-center mb-6">
-            <h2 className="section-title gradient-section-header">800x, Visualized</h2>
+            <h2 className="section-title gradient-section-header">TriMagnetix cuts compute energy by over 800x</h2>
           </div>
         </AnimateOnScroll>
 
         <AnimateOnScroll animation="fade-in" delay="delay-200">
           <p className="max-w-3xl mx-auto text-center text-gray-300 mb-12">
-            Take a 1 GW AI datacenter, like Meta&apos;s campus in Lebanon, Indiana. Run on{' '}
-            <span className="highlight-text">nanomagnetic logic</span>, and 5,000 racks shrink to 6.25.
+            For mission-critical <span className="highlight-text">edge compute</span> and 
+            <span className="highlight-text"> remote sensing</span>, by leveraging
+              <span className="highlight-text"> Nanomagnetic Logic (NML)</span> over 
+              traditional electrical CMOS Logic.
           </p>
         </AnimateOnScroll>
 
@@ -41,6 +43,15 @@ export default function EnergyImpactSection() {
               Each square is one 200 kW rack. Same datacenter, 800x less energy.
             </figcaption>
           </figure>
+        </AnimateOnScroll>
+
+
+        <div><br></br></div>
+        <AnimateOnScroll animation="fade-in" delay="delay-200">
+          <p className="max-w-3xl mx-auto text-center text-gray-300 mb-12">
+            A 1 GW AI datacenter, like Meta&apos;s campus in Lebanon, Indiana. Run on{' '}
+            nanomagnetic logic, and <span className="highlight-text">5,000 racks shrink to 6.25</span>.
+          </p>
         </AnimateOnScroll>
 
         <div className="max-w-5xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">

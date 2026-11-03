@@ -9,8 +9,8 @@ const problemStats = [
       'AI chip performance doubles every 9 months. Power supply doesn\'t. Compute is now limited by energy, not speed.',
   },
   {
-    value: '40%',
-    title: 'Lost to standby leakage',
+    value: '40% Lost',
+    title: 'Via standby leakage',
     description:
       'In CMOS embedded systems, standby leakage alone can eat up to 40% of the power budget.',
   },
@@ -43,11 +43,11 @@ export default function ProblemSection() {
               loop
               playsInline
               preload="metadata"
-              aria-label="Animation: AI chips double every 9 months, energy doesn't. World data center electricity use grows from 415 TWh in 2024 to a projected 945 TWh in 2030, more than all of Japan uses today. In the US, data centers could use one in every five kilowatt-hours by 2035, up from about 6% today."
+              aria-label="Animation: AI chips double every 9 months, energy doesn't. World data center electricity use grows from 415 TWh in 2024 to a projected 945 TWh in 2030, more than all of Japan uses today."
             />
             <figcaption className="caption-text px-6 py-3 text-left bg-gray-900/80">
-              AI demand is set to more than double data center electricity use by 2030. Sources: IEA, Energy and AI
-              (2025); BloombergNEF (2026).
+              AI demand is set to more than double data center electricity use by 2030. Source: IEA, Energy and AI
+              (2025).
             </figcaption>
           </figure>
         </AnimateOnScroll>
@@ -63,15 +63,6 @@ export default function ProblemSection() {
             </AnimateOnScroll>
           ))}
         </div>
-
-        <AnimateOnScroll animation="fade-in" delay="delay-400">
-          <div className="max-w-3xl mx-auto mt-12 text-center">
-            <p className="pull-quote inline-block text-left">
-              TriMagnetix cuts compute energy by over 800x core for mission-critical edge compute and remote sensing, by leveraging
-              Nanomagnetic Logic (NML) over traditional electrical CMOS Logic.
-            </p>
-          </div>
-        </AnimateOnScroll>
       </div>
     </section>
   );

@@ -64,11 +64,7 @@ export default function TractionSection() {
           </div>
         </AnimateOnScroll>
 
-        <AnimateOnScroll animation="fade-in" delay="delay-200">
-          <p className="max-w-3xl mx-auto text-center text-gray-300 mb-12">
-            Key market LOIs in 3 months. A paid pilot 2 months later.
-          </p>
-        </AnimateOnScroll>
+        
 
         {/* Paid pilot callout */}
         <AnimateOnScroll animation="scale-up" delay="delay-200">

@@ -21,19 +21,19 @@ const pillars = [
   {
     title: 'Fits Existing Fabs',
     description:
-      'Integrates as an ASIC in standard foundry flows, alongside the processors you already use.',
+      'Integrates as an ASIC in standard foundry flows alongside the processors already in use.',
     icon: <FiTool className="text-4xl text-emerald-400 mb-4 hover-icon" />,
   },
   {
     title: '>10x Lower Heat Output',
     description:
-      'At least 10x less heat than silicon. That matters in tight, isolated spaces where cooling is hard.',
+      'At least 10x less heat than silicon. Optimal for isolated spaces where cooling is constrained.',
     icon: <FiThermometer className="text-4xl text-emerald-400 mb-4 hover-icon" />,
   },
   {
     title: 'Architecture Validated',
     description:
-      'TRL 4-5. NML logic works on real fabricated devices, not just in simulation.',
+      'TRL 4-5. NML logic tested in real fabricated devices in lab. Now implementing in-field.',
     icon: <FiCheckCircle className="text-4xl text-emerald-400 mb-4 hover-icon" />,
   },
 ];
@@ -51,7 +51,7 @@ const details = [
   },
   {
     title: 'Ultra-Low Heat',
-    description: 'About 10x less heat, for dense systems where cooling is the bottleneck.',
+    description: 'At least 10x less heat, for dense systems where cooling is the bottleneck.',
     icon: <FiThermometer className="text-2xl text-emerald-400" />,
   },
   {

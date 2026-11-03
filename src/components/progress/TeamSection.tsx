@@ -5,28 +5,28 @@ import AnimateOnScroll from '../AnimateOnScroll';
 const founders = [
   {
     name: 'Madison Hanberry',
-    role: 'Co-Founder & CEO',
+    role: 'Co-Founder',
     focus: 'Core Technical Development',
     photo: '/progress/team-madison.jpg',
     background: 'AWS · Georgia Tech · UW',
   },
   {
     name: 'Lucas Hahn',
-    role: 'Co-Founder & CSO',
+    role: 'Co-Founder',
     focus: 'Fundraising & Partnerships',
     photo: '/progress/team-lucas.jpg',
     background: 'AWS · Purdue · MTS',
   },
   {
     name: 'Pranav Jain',
-    role: 'Co-Founder & CTO',
+    role: 'Co-Founder',
     focus: 'Technology, Operations & Sales',
     photo: '/progress/team-pranav.jpg',
     background: 'Anduril · Microsoft · D.A.T.A. Lab',
   },
   {
     name: 'Aspen White',
-    role: 'Co-Founder & CBO',
+    role: 'Co-Founder',
     focus: 'Administration',
     photo: '/progress/team-aspen.jpg',
     background: 'AerwareAI · Founder Institute · T-Mobile',
