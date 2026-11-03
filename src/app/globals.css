@@ -74,6 +74,10 @@
     @apply text-emerald-400 font-medium;
   }
 
+  .highlight-text-orange {
+    @apply text-orange-400 font-medium;
+  }
+
   .caption-text {
     @apply text-sm text-gray-400 italic;
   }
